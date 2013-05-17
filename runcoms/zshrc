@@ -11,3 +11,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshrc-recurser" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshrc-recurser"
+fi

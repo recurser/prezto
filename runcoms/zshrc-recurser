@@ -1,0 +1,34 @@
+#----------------------------------------------
+# P A T H S
+#----------------------------------------------
+PATH=/sbin:$HOME/.home-config/bin:$PATH
+
+#----------------------------------------------
+# A L I A S E S
+#----------------------------------------------
+alias ll="ls -lsF"
+alias la="ls -lsaF"
+alias vi="vim"
+alias "gem install"="gem install --no-rdoc --no-ri"
+alias cucumber="cucumber --require features"
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias ackig="ack --ignore-dirs"
+alias ssq="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeychecking=no"
+alias scq="scp -o UserKnownHostsFile=/dev/null -o StrictHostKeychecking=no"
+alias mate="subl"
+alias edit="subl"
+
+#----------------------------------------------
+# F U N C T I O N S
+#----------------------------------------------
+function svndiff() {
+  svn diff --diff-cmd /usr/bin/diff -x "-bB" $1
+}
+
+#----------------------------------------------
+# L O C A L - S P E C I F I C
+#----------------------------------------------
+if [[ -s "${ZDOTDIR:-$HOME}/.zshrc.local" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zshrc.local"
+fi
